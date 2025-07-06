@@ -19,6 +19,9 @@
  * - You may not use the same element twice
  * - You can return the indices in any order
  */
+import java.util.HashMap;
+import java.util.Arrays;
+
 class TwoSums {
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
@@ -30,5 +33,19 @@ class TwoSums {
             map.put(nums[i],i);
         }
         return new int[] {};
+    }
+
+    /**
+     * Main method to test the twoSum function.
+     */
+    public static void main(String[] args) {
+        TwoSums solution = new TwoSums();
+
+        int[] nums = {2, 7, 11, 15};
+        int target = 9;
+
+        int[] result = solution.twoSum(nums, target);
+
+        System.out.println("Indices: " + Arrays.toString(result));
     }
 }
